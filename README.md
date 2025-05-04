@@ -57,7 +57,7 @@ Bu proje, 6 Şubat 2023 depremi gibi büyük afetlerde sosyal medya (özellikle 
 
 
 ### 📈 Duygu Dağılımı Grafiği
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/fe370fe7-a3e5-493e-b219-522e8044fc93)
 
 
 ---
