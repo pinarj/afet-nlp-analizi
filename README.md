@@ -41,7 +41,21 @@ Bu proje, 6 Şubat 2023 depremi gibi büyük afetlerde sosyal medya (özellikle 
 ## 🖼️ Görselleştirme Örnekleri
 
 ### ✅ En Sık Geçen İhtiyaçlar
-<pre><code>```python import matplotlib.pyplot as plt from collections import Counter # İhtiyaçlar ihtiyac_counter = Counter(sum(yardim_df["İhtiyaçlar"], [])) labels, values = zip(*ihtiyac_counter.most_common(10)) plt.figure(figsize=(8,5)) plt.barh(labels, values) plt.title("En Sık Geçen İhtiyaçlar") plt.gca().invert_yaxis() plt.show() ``` </code></pre>
+```python
+import matplotlib.pyplot as plt
+from collections import Counter
+
+# İhtiyaçlar
+ihtiyac_counter = Counter(sum(yardim_df["İhtiyaçlar"], []))
+labels, values = zip(*ihtiyac_counter.most_common(10))
+
+plt.figure(figsize=(8,5))
+plt.barh(labels, values)
+plt.title("En Sık Geçen İhtiyaçlar")
+plt.gca().invert_yaxis()
+plt.show()
+```
+
 ![image](https://github.com/user-attachments/assets/ddad23b4-90bb-4456-bf9e-0588b59a3c5b)
 
 
