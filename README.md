@@ -60,18 +60,72 @@ plt.show()
 
 
 ### 📍 En Sık Bahsedilen Yerler
-![image](https://github.com/user-attachments/assets/8d82eff2-89e6-4666-91da-38a05efad573)
+```python
+from collections import Counter
+import matplotlib.pyplot as plt
+
+yer_counter = Counter(sum(yardim_df["Yerler"], []))
+etiketler, sayilar = zip(*yer_counter.most_common(10))
+
+plt.figure(figsize=(8, 5))
+plt.barh(etiketler, sayilar)
+plt.xlabel("Frekans")
+plt.title("En Sık Bahsedilen Yerler")
+plt.gca().invert_yaxis()
+plt.tight_layout()
+plt.show()
+```
+
+![image](https://github.com/user-attachments/assets/59b17f26-93a4-4bdd-93ff-4366afefb459)
+
 
 
 ### 🤖 Confusion Matrix (Logistic Regression)
+```python
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+cm = confusion_matrix(y_test, y_pred)
+sns.heatmap(cm, annot=True, fmt="d", cmap="Blues")
+plt.xlabel("Tahmin")
+plt.ylabel("Gerçek")
+plt.title("Confusion Matrix")
+plt.show()
+```
+
 ![image](https://github.com/user-attachments/assets/06243c6f-6b72-4191-a03f-651bbac8f30a)
 
 
 ### 💚 Naive Bayes Confusion Matrix
+```python
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+cm_nb = confusion_matrix(y_test, y_pred_nb)
+sns.heatmap(cm_nb, annot=True, fmt="d", cmap="Greens")
+plt.xlabel("Tahmin")
+plt.ylabel("Gerçek")
+plt.title("Naive Bayes - Confusion Matrix")
+plt.show()
+```
+
 ![image](https://github.com/user-attachments/assets/1b28a7f2-a9ab-4fed-8194-b1a083064fb3)
 
 
 ### 📈 Duygu Dağılımı Grafiği
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.countplot(data=yardim_df, x="Duygu")
+plt.title("Yardım Tweet’lerinin Duygu Dağılımı")
+plt.xlabel("Duygu")
+plt.ylabel("Tweet Sayısı")
+plt.show()
+```
+
 ![image](https://github.com/user-attachments/assets/fe370fe7-a3e5-493e-b219-522e8044fc93)
 
 
