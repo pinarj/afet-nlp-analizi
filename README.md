@@ -131,12 +131,6 @@ plt.show()
 
 ---
 
-## ▶️ Google Colab Üzerinde Çalıştır
-
-📌 Projeyi Colab’da çalıştırmak için:  
-👉 [Google Colab Notebook](https://colab.research.google.com/drive/1lkNZMhEXxw3f4YxZgPWLSQL71_58YLzy?usp=sharing)
-
-
 
 
 
